@@ -7,6 +7,7 @@ from modules.identity import *
 from modules.compute import *
 from modules.autonomous_db import *
 from modules.db_system import *
+from modules.analytics import *
 
 ########## Configuration ####################
 # Specify your config file
@@ -73,7 +74,9 @@ for region in target_regions:
     config["region"] = region.region_name
 
     change_autonomous_db_license(config, signer, target_compartments)
+    change_analytics_license(config, signer, compartments)
     stop_compute_instances(config, signer, target_compartments)
     stop_database_systems(config, signer, target_compartments)
     stop_autonomous_dbs(config, signer, target_compartments)
+    stop_analytics_instance(config, signer, compartments)
 

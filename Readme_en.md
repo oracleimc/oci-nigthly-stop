@@ -1,10 +1,11 @@
 # oci-nigthly-stop
-Stop your OCI instances at night.  And change the lisence models of your Autonomous Databases to BYOL.
+Stop your OCI instances at night.  And change the lisence models of your Autonomous Databases and Analytics to BYOL.
 
 # Supported instances for stop
 - Compute Instances
 - Autonomous Databases
 - Database nodes of database systems (VM and Baremetal)
+- Analytics
 
 # Prerequisites
 - oci python SDK
